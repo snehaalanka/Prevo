@@ -1,0 +1,87 @@
+/* The 'Wall' that blurs the landing page behind the box */
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* Darken slightly */
+  backdrop-filter: blur(15px); /* This is the blur you saw in Figma */
+  -webkit-backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* The Box with the Shiny Border */
+.auth-card {
+  width: 420px;
+  padding: 40px;
+  background-color: #431d7f; /* Solid dark background to keep it sharp */
+  border-radius: 24px;
+  position: relative;
+  text-align: center;
+  
+  /* Shiny Border Trick */
+  background-image: linear-gradient(#060315, #07031d), 
+                    linear-gradient(135deg, #f5f4f9 0%, #8c4bff 50%, #121235 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 1.5px solid transparent;
+  
+  box-shadow: 0 20px 40px rgba(40, 29, 74, 0.6);
+}
+
+.auth-card h2 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 28px;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.auth-card p {
+  color: #94a3b8;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  font-family: 'Instrument Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #8c4bff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.switch-link:hover {
+  text-decoration: underline !important;
+  filter: brightness(1.2);
+  transition: all 0.2s ease;
+}
+
+/* Ensure the title is always pure white regardless of the shiny border */
+.auth-card h2 {
+  color: #ffffff !important;
+  margin-top: 0;
+}
