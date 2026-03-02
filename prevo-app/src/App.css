@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg-deep: #05050a;
+  --accent-purple: #8c4bff;
+  --text-dim: #94a3b8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-deep);
+  background-image: radial-gradient(circle at 50% 35%, #161037 0%, #000000 100%);
+  color: #ffffffef;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 4%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 22px;
+  height: 22px;
+  border: 5.5px solid var(--accent-purple);
+  border-radius: 50%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.login-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.register-btn {
+  background-color: var(--accent-purple);
+  color: rgba(255, 255, 255, 0.908);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(227, 222, 229, 0.5);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  height: calc(100vh - 80px);
+  text-align: center;
+  padding-top: 20vh; 
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}
+
+.pill-label {
+  background: rgba(140, 75, 255, 0.12);
+  border: 1px solid rgba(140, 75, 255, 0.2);
+  padding: 8px 22px;
+  border-radius: 100px;
+  color: #b180ff;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.main-title {
+  font-size: clamp(2.5rem, 8vw, 5.2rem);
+  font-weight: 800; 
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin: 0 0 25px 0;
+}
+
+.gradient-part {
+  background: linear-gradient(to right, #8f61da, #4c2492);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  color: var(--text-dim);
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 650px;
+}
+
+.ready-tag {
+  display: block;
+  margin-top: 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
