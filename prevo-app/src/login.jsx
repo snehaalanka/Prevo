@@ -1,7 +1,7 @@
 import React from 'react';
 import './Auth.css';
 
-const Login = ({ isOpen, onClose, onSwitch }) => {
+const Login = ({ isOpen, onClose, onSwitch, onLoginSuccess }) => {
   if (!isOpen) return null;
 
   return (
@@ -15,9 +15,13 @@ const Login = ({ isOpen, onClose, onSwitch }) => {
           <input type="email" placeholder="Email Address" className="auth-input" required />
           <input type="password" placeholder="Password" className="auth-input" required />
           
-          <button type="submit" className="register-btn" style={{ width: '100%', marginTop: '20px' }}>
-            Login
-          </button>
+          <button 
+      onClick={onLoginSuccess} 
+      className="register-btn" 
+      style={{ width: '100%', marginTop: '20px' }}
+    >
+      Login
+    </button>
         </form>
 
         <p style={{ marginTop: '24px', fontSize: '14px', color: '#94a3b8' }}>

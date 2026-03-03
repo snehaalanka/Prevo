@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './App.css';
 import Login from "./login.jsx";
 import Register from "./register.jsx";
+import Dashboard from "./Dashboard.jsx"; 
 
 function App() {
   const [isLoginOpen, setLoginOpen] = useState(false);
   const [isRegisterOpen, setRegisterOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
 
-  // Helper functions to handle the "Switch" logic
   const openRegister = () => {
     setLoginOpen(false);
     setRegisterOpen(true);
@@ -18,23 +19,34 @@ function App() {
     setLoginOpen(true);
   };
 
+  const handleLoginSuccess = () => {
+    setLoginOpen(false);
+    setRegisterOpen(false);
+    setIsLoggedIn(true);
+  };
+
+  if (isLoggedIn) {
+    return <Dashboard userName="Sneha" />;
+  }
+
   return (
     <div className="container">
       {/* Auth Modals */}
       <Login 
         isOpen={isLoginOpen} 
         onClose={() => setLoginOpen(false)} 
-        onSwitch={openRegister} 
+        onSwitch={openRegister}
+        onLoginSuccess={handleLoginSuccess} 
       />
       <Register 
         isOpen={isRegisterOpen} 
         onClose={() => setRegisterOpen(false)} 
-        onSwitch={openLogin} 
+        onSwitch={openLogin}
+        onLoginSuccess={handleLoginSuccess}
       />
 
       <nav className="navbar">
         <div className="brand-section">
-          {/* Logo with your 5.5px border defined in App.css */}
           <div className="brand-logo"></div>
           <span style={{ fontWeight: 800, fontSize: '20px', fontFamily: 'Instrument Sans' }}>Prevo</span>
         </div>
@@ -64,10 +76,10 @@ function App() {
         </h1>
 
         <div className="description">
-  Get your resume analyzed, see your ATS score and <br />
-  master mock interviews tailored to your JD.
-  <span className="ready-tag">Step in ready.</span>
-</div>
+          Get your resume analyzed, see your ATS score and <br />
+          master mock interviews tailored to your JD.
+          <span className="ready-tag">Step in ready.</span>
+        </div>
       </main>
     </div>
   );

@@ -1,12 +1,12 @@
-/* The 'Wall' that blurs the landing page behind the box */
+
 .auth-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.4); /* Darken slightly */
-  backdrop-filter: blur(15px); /* This is the blur you saw in Figma */
+  background: rgba(0, 0, 0, 0.4); 
+  backdrop-filter: blur(15px); 
   -webkit-backdrop-filter: blur(15px);
   display: flex;
   justify-content: center;
@@ -14,17 +14,16 @@
   z-index: 1000;
 }
 
-/* The Box with the Shiny Border */
 .auth-card {
   width: 420px;
   padding: 40px;
-  background-color: #431d7f; /* Solid dark background to keep it sharp */
+  background-color: #431d7f; 
   border-radius: 24px;
   position: relative;
   text-align: center;
   
-  /* Shiny Border Trick */
-  background-image: linear-gradient(#060315, #07031d), 
+ 
+  background-image: linear-gradient(#09041d, #07031f), 
                     linear-gradient(135deg, #f5f4f9 0%, #8c4bff 50%, #121235 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
@@ -50,7 +49,7 @@
   width: 100%;
   padding: 14px;
   margin: 10px 0;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(30, 8, 61, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   color: white;
@@ -80,7 +79,6 @@
   transition: all 0.2s ease;
 }
 
-/* Ensure the title is always pure white regardless of the shiny border */
 .auth-card h2 {
   color: #ffffff !important;
   margin-top: 0;

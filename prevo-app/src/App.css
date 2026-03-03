@@ -108,24 +108,23 @@ body {
   font-weight: 800; 
   letter-spacing: -0.04em;
   line-height: 1.4;
-  margin-bottom: 15px; /* Reduced from 25px to bring subtext closer */
-}
+  margin-bottom: 15px; }
 
 .description {
   color: var(--text-dim);
   font-size: 18px;
-  line-height: 1.5; /* Good balance for 2 lines of text */
+  line-height: 1.5; 
   max-width: 650px;
-  margin: 0 auto; /* Centers it and removes extra top margin */
+  margin: 0 auto;
 }
 
 .description p {
-  margin: 0; /* Removes default p tag spacing that causes overlaps */
+  margin: 0; 
 }
 
 .ready-tag {
   display: block;
-  margin-top: 15px; /* Adjust this to move the bold tag closer/further */
+  margin-top: 15px; 
   color: white;
   font-weight: 700;
   font-size: 18px;
