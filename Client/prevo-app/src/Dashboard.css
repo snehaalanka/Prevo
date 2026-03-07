@@ -1,4 +1,3 @@
-
 .dashboard-container {
   display: flex;
   height: 100vh;
@@ -7,7 +6,6 @@
   font-family: 'Instrument Sans', sans-serif;
   overflow: hidden;
 }
-
 
 .sidebar {
   width: 260px;
@@ -116,16 +114,24 @@
   color: #ffffff;
 }
 
-
+/* ✅ FIXED: removed align-items: center and margin-right: 150px */
 .dashboard-main {
   flex: 1;
-  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+/* Dashboard home tab only gets centered padding */
+.dashboard-home {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: auto;
+  padding: 60px 40px;
   margin-top: 48px;
-  margin-right: 150px;
+  box-sizing: border-box;
 }
 
 .welcome-header {
@@ -158,7 +164,7 @@
 }
 
 .upload-box {
-  border: 2px dashed rgba(255, 255, 255, 0.1);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
   border-radius: 24px;
   padding: 80px 40px;
   text-align: center;
@@ -173,9 +179,12 @@
 }
 
 .upload-icon {
-  font-size: 48px;
-  color: #8c4bff;
   margin-bottom: 20px;
+  color: #8c4bff; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 0 8px rgba(140, 75, 255, 0.4));
 }
 
 .upload-text {
@@ -188,14 +197,6 @@
 .upload-hint {
   color: #64748b;
   font-size: 14px;
-}
-.upload-icon {
-  margin-bottom: 20px;
-  color: #8c4bff; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  filter: drop-shadow(0 0 8px rgba(140, 75, 255, 0.4));
 }
 
 .upload-icon svg {

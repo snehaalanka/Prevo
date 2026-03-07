@@ -1,0 +1,80 @@
+.skill-container {
+  flex: 1;
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #0e061a;
+  height: 100vh;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.skill-header {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.skill-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #8c4bff;
+  margin: 0 0 16px 0;
+  text-align: left;
+}
+
+.skill-divider {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  margin: 0;
+}
+
+.skill-empty-state {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.warning-icon {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #8c4bff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8c4bff;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.error-text {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.error-hint {
+  color: #64748b;
+  font-size: 16px;
+}
+
+.skill-results {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success-text {
+  color: #a3ff12;
+  font-size: 18px;
+}
