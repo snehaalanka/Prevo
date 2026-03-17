@@ -1,0 +1,76 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #0e061a;
+  color: white;
+  font-family: 'Instrument Sans', sans-serif;
+  overflow: hidden;
+}
+
+.dashboard-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.dashboard-home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 40px;
+  margin-top: 48px;
+  box-sizing: border-box;
+}
+
+.welcome-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.welcome-header h1 {
+  font-size: 64px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.user-gradient {
+  background: linear-gradient(to right, #683db3, #7446a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-header p {
+  color: #94a3b8;
+  font-size: 24px;
+  margin-top: 12px;
+}
+
+.upload-section {
+  width: 100%;
+  max-width: 720px;
+}
+
+.placeholder-content {
+  padding: 60px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.loader {
+  margin: 10px auto;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #ddd;
+  border-top: 4px solid #8c4bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}

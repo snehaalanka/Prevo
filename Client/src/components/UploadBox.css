@@ -1,0 +1,45 @@
+.upload-box {
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  padding: 80px 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.upload-box:hover {
+  border-color: #8c4bff;
+  background: rgba(140, 75, 255, 0.03);
+  transform: translateY(-2px);
+}
+
+.upload-icon {
+  margin-bottom: 20px;
+  color: #8c4bff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 0 8px rgba(140, 75, 255, 0.4));
+}
+
+.upload-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.upload-box:hover .upload-icon svg {
+  transform: translateY(-5px);
+}
+
+.upload-text {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.upload-hint {
+  color: #64748b;
+  font-size: 14px;
+}
