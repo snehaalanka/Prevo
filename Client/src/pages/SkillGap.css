@@ -4,14 +4,15 @@
   display: flex;
   flex-direction: column;
   background-color: #0e061a;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   width: 100%;
+  overflow-y: auto;
+  gap: 28px;
 }
 
 .skill-header {
   width: 100%;
-  margin-bottom: 28px;
 }
 
 .skill-title {
@@ -27,9 +28,17 @@
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
   width: 100%;
-  margin: 0;
+  margin: 0 0 14px 0;
 }
 
+.skill-quote {
+  color: #94a3b8;
+  font-size: 15px;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ── Empty state ── */
 .skill-empty-state {
   flex: 1;
   width: 100%;
@@ -65,16 +74,212 @@
   font-size: 16px;
 }
 
-.skill-results {
-  flex: 1;
+/* ── Stats Row ── */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.success-text {
-  color: #9b5cff;
+.stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: border-color 0.2s ease;
+}
+
+.stat-card:hover {
+  border-color: rgba(140, 75, 255, 0.3);
+}
+
+.stat-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.readiness-icon { background: rgba(140, 75, 255, 0.12); color: #8c4bff; }
+.matched-icon   { background: rgba(140, 75, 255, 0.12); color: #8c4bff; }
+.missing-icon   { background: rgba(255, 100, 100, 0.1); color: #ff6464; }
+
+.stat-label {
+  color: #64748b;
+  font-size: 13px;
+  margin: 0 0 4px 0;
+  font-weight: 500;
+}
+
+.stat-value {
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ── Analysis Row ── */
+.analysis-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.analysis-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.2s ease;
+}
+
+.analysis-card:hover {
+  border-color: rgba(140, 75, 255, 0.25);
+}
+
+.analysis-card-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.strengths-title { color: #8c4bff; }
+.gaps-title      { color: #ff6464; }
+.focus-title     { color: #a78bfa; }
+
+.focus-subtitle {
+  color: #64748b;
+  font-size: 12px;
+  margin: -10px 0 0 0;
+}
+
+.skill-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cbd5e1;
+  font-size: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.skill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.strengths-dot { background: #8c4bff; }
+.gaps-dot      { background: #ff6464; }
+.focus-dot     { background: #a78bfa; }
+
+.focus-card {
+  justify-content: space-between;
+}
+
+.mock-btn {
+  margin-top: auto;
+  padding: 12px 20px;
+  background: #8c4bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(140, 75, 255, 0.3);
+  width: 100%;
+}
+
+.mock-btn:hover {
+  background: #7a3eeb;
+  transform: translateY(-2px);
+}
+
+/* ── Improvement Plan ── */
+.improvement-section {
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.improvement-title {
   font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin: 0 0 16px 0;
+}
+
+.improvement-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.improvement-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.improvement-card:hover {
+  border-color: rgba(140, 75, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.plan-title {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.plan-duration {
+  color: #64748b;
+  font-size: 12px;
+  margin: 0;
+}
+
+.plan-link {
+  color: #8c4bff;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-top: 8px;
+  transition: color 0.2s ease;
+}
+
+.plan-link:hover {
+  color: #a78bfa;
 }
